@@ -20,8 +20,8 @@ void main() {
         - `Runes` (often replaced with `characters` API)
     - Symbols
         - `Symbol`
-    - The Value null
-        - `Null`
+    - The Value Null
+        - `null`
 
     Basic Syntax
     - `{TYPE} {NAME} = {VALUE}`

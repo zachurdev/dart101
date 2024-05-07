@@ -8,5 +8,7 @@ dart create -t console-simple . --force
 bash Autosave.bash
 dart run
 Hello world!
-
+touch ./bin/variables.dart
+dart run ./bin/variables.dart
 ```
+( . . . )
