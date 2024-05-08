@@ -22,14 +22,46 @@ void main() {
     return('$number minus five equals: ${number - 5}');
   }
 
-  print(thirdFn(7));
+  thirdFn(7);
 
   // Function with named parameters
-  namedParams({ int? a, int b = 5 }) {
+  namedParams({ int a = 7, int b = 5 }) {
     return(a - b);
   }
 
-  namedParams(a);
+  namedParams();
 
+  // Function with nullable named parameters
+  int namedParamsNull({ int? c, int d = 8}) {
+      c ??= 0; // Prevents potentially-null error
+      return(c + d);
+  }
+
+  namedParamsNull(c: 14);
+
+  // Required named parameters function
+  namedParamsReq({ required int e, int f = 12 }) {
+    return(e + f);
+  }
+
+  namedParamsReq(e: 18);
+  namedParamsReq(e: 20, f: 13);
+
+  // Arrow function
+  arrowFn(String content) => 'Return $content';
+  print(arrowFn('some stuff'));
+
+  // First-class functions
+  // Define the callMe function
+  callMe(Function callback) {
+    // Invoke the callback function
+    final result = callback();
+    print(result);
+  }
+
+  // Anonymous function
+  callMe(
+      () => 'anon fn got called'
+    );
 
 }
