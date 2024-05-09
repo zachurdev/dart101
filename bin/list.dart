@@ -1,5 +1,7 @@
 void main() {
 
+  // Lists in Dart are equivalent to arrays in other languages
+  
   // List inherits from iterable
   // Iterables: List, Map, Set
   // Angled brackets <GENERIC_TYPE>
