@@ -9,6 +9,9 @@ void main() {
 
   const circ = Circle(radius: 5, name: 'MyCircle');
 
+  var pt1 = Point.fromMap({ 'lat':23, 'lng': 50 });
+  var pt1 = Point.fromList([23, 50])
+
 }
 
 class Rectangle {
@@ -28,4 +31,21 @@ class Circle {
 
   const Circle({ required int radius, String? name });
   
+}
+
+class Point {
+
+  double lat = 0;
+  double lng = 0;
+
+  Point.fromMap(Map data) {
+    lat = data['lat'];
+    lng = data['lng'];
+  }
+
+  Point.fromtList(List data) {
+    lat = data[0];
+    lng = data[1];
+
+  }
 }
