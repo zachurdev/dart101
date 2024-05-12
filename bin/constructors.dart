@@ -9,8 +9,8 @@ void main() {
 
   const circ = Circle(radius: 5, name: 'MyCircle');
 
-  var pt1 = Point.fromMap({ 'lat':23, 'lng': 50 });
-  var pt1 = Point.fromList([23, 50])
+  var pt1 = Point.fromMap({ 'lat': 23, 'lng': 50 });
+  var pt2 = Point.fromList([23, 50]);
 
 }
 
@@ -43,7 +43,7 @@ class Point {
     lng = data['lng'];
   }
 
-  Point.fromtList(List data) {
+  Point.fromList(List data) {
     lat = data[0];
     lng = data[1];
 
