@@ -5,8 +5,7 @@ void main() {
   var delay = Future.delayed(Duration(seconds: 3));
 
   delay
-    .then((value) => print('I have been waiting.'));
-  delay
+    .then((value) => print('I have been waiting.'))
     .catchError((err) => print(err));
 
 }
